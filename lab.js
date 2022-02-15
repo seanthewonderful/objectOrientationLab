@@ -234,7 +234,18 @@ console.log(kitty.name1)
   Call the castSpell function on the instance of your wizard.
 */
 
-//Code here
+class Wizard {
+  constructor(name2, age, favoriteSpell){
+    this.name2=name2
+    this.age=age
+    this.favoriteSpell=favoriteSpell
+  }
+  castSpell(){
+    console.log(`${this.name2} has cast ${this.favoriteSpell}`)
+  }
+}
+let wiz1 = new Wizard('Willy', 745, 'Dark-side Electricity Fingers')
+wiz1.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -259,8 +270,26 @@ console.log(kitty.name1)
     to be newPrice.
 */
 
-//Code Here
-
+class phone {
+  constructor(brand, model, storage, color, price, soldProperties){
+    this.brand=brand
+    this.model=model
+    this.storage=storage
+    this.color=color
+    this.price=price
+    this.soldProperties=false
+  }
+  sell(){
+    if(this.soldProperties===false){
+      this.soldProperties=true
+    }else {
+      this.soldProperties=true
+    }return(`${this.brand} ${this.model} has been sold.`)
+  }
+  changePrice(newPrice){
+    this.price=newPrice
+  }
+}
   
 /*
     Next make three new phone instances using your class.
@@ -272,7 +301,9 @@ console.log(kitty.name1)
     - price: number
 */
 
-//Code Here
+let phone1 = new phone('Samsung','Solar System',20,'Pink with sequins',600)
+let phone2 = new phone('Nokia','Tamagotchi',4,'blue',199)
+let phone3 = new phone('KGB Spy Phone','LeninIII',8,'Pinko',999)
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -281,16 +312,16 @@ console.log(kitty.name1)
   Then console.log that object to see the price change
 */ 
 
-//Code Here 
-
-
+phone3.changePrice(879)
+console.log(phone3)
 /*
   Now call the sell method on one of your other phone objects
 
   Print the value of that phone's sell property to make sure it's been changed to true
 */
 
-//Code Here 
+phone2.sell()
+console.log(phone2)
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
@@ -309,9 +340,8 @@ const colors = {
 }
 //do not edit this object
 
-//Code Here 
-
-
+let clonedColors = {...colors}
+console.log(clonedColors)
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
