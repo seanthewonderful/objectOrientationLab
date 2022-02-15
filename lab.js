@@ -206,7 +206,7 @@ console.log(user)
   Using the user object above, delete the users age off of the object.
 */
 
-//Code Here
+delete user.age
 
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
@@ -216,9 +216,15 @@ console.log(user)
   Print the name of your cat instance using dot notation.
 */
 
-//Code here
-
-
+class Cat {
+  constructor(name1, age, color){
+  this.name1=name1
+  this.age=age
+  this.color=color
+  }
+}
+kitty = new Cat('Dusty',25, 'gray')
+console.log(kitty.name1)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
