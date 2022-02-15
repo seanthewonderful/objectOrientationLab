@@ -18,22 +18,23 @@ const me = {
 //name (a string), color (a string), age (a number),
 //and goodBoy/goodGirl (a boolean).
 
-//Code here
-
+const dog = {
+  name: 'Spike',
+  color: 'white',
+  age: 8,
+  goodBoy: true
+}
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
-//Code here
-
-
+console.log(dog.name)
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
-//Code here
-
+console.log(dog['color'])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -42,23 +43,33 @@ const me = {
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+const favoriteThings = {
+  band: 'Vince Guaraldi Trio',
+  food: 'Slop',
+  person: 'Rory',
+  book: 'Go Dog Go',
+  movie: 'Indiana Jones and the Raiders of the Lost Ark',
+  holiday: '4th of July',
+}
 
 
 /*
-  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
+  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your 
+  favorite car and then another key named 'show' with the value being your favorite show.
 */
 
-//Code here
-
+favoriteThings.car = 'Tesla'
+favoriteThings['show'] = 'Columbo'
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
-  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
+  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those 
+    things already, change them to something else.)
 */
 
-//Code here
+favoriteThings.food = 'Chicken Nuggets'
 
+//console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -75,8 +86,14 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+// let{color}=carDetails
+// let{make}=carDetails
+// let{model}=carDetails
+// let{year}=carDetails
 
+const {color, make, model, year} = carDetails
+
+console.log(carDetails)
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -87,14 +104,21 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
+let popp = {
+  firstName: 'Don',
+  lastName: 'Montagne',
+  title: 'President'
+}
+
 function greeting( obj ) {
-  //Code Here
-  
+  let{firstName}=obj
+  let{lastName}=obj
+  let{title}=obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
+console.log(greeting(popp))
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -107,8 +131,28 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+let stateNums = {
+  utah: 200,
+  california: 800,
+  texas: 700,
+  arizona: 300
+}
+let{utah}=stateNums
+let{california}=stateNums
+let{texas}=stateNums
+let{arizona}=stateNums
 
+totalPopulation = () => {
+  let x=(utah+california+texas+arizona)
+  return x
+}
+//instructor solution below
+// totalPopulation=(obj)=> {
+//   const{utah, california, texas, arizona} = obj
+//   return utah+california+texas+arizona
+// }
+
+console.log(totalPopulation(stateNums))
 
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
@@ -120,9 +164,18 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
+const ingred = {
+  carb: 'bread',
+  fat: 'globs of fat',
+  protein: 'snickers'
+}
+//const{carb, fat, protein} = ingred
 
-//Code Here
-
+ingredients=(obj)=>{
+  const{carb, fat, protein}=obj
+  return [carb, fat, protein]
+}
+console.log(ingredients(ingred))
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
@@ -143,8 +196,10 @@ var user = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+user.name='Bryan G Smith'
+user.email='bryan.smith@devmounta.in'
 
+console.log(user)
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
