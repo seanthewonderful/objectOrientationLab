@@ -340,8 +340,8 @@ const colors = {
 }
 //do not edit this object
 
-let clonedColors = {...colors}
-console.log(clonedColors)
+const colorsCopy = {...colors}
+console.log(colorsCopy)
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
@@ -367,9 +367,8 @@ const shippingInfo = {
 }
 //do not edit the objects above
 
-//Code Here
-
-
+let helensInfo = {...contactInfo,...shippingInfo}
+console.log(helensInfo)
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
 
@@ -385,15 +384,25 @@ const shippingInfo = {
   And finally, print the value of the mileage.
 */
 
-//Code Here 
+class Vehicle{
+  constructor(capacity, color, mileage){
+    this.capacity=capacity
+    this.color=color
+    this.mileage=mileage
+  }
+    move(miles){
+      this.mileage=this.mileage+miles
+    }console.log(this.mileage)
+  }
 
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
-//Code Here
-
+let myFirstVehicle = new Vehicle(5,'red',90000)
+myFirstVehicle.move(10000)
+console.log(myFirstVehicle)
 
 /* 
   Now we'll create a class that's based off of the vehicle class. 
