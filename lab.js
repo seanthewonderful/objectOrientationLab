@@ -392,7 +392,8 @@ class Vehicle{
   }
     move(miles){
       this.mileage=this.mileage+miles
-    }console.log(this.mileage)
+      console.log(this.mileage)
+    }
   }
 
 
